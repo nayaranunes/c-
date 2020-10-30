@@ -1,4 +1,5 @@
-/*Suponha uma sequência de N cartas numeradas de 1 a N.
+/*
+Suponha uma sequência de N cartas numeradas de 1 a N.
 
 Para cada carta, você irá ou descartá-la ou passar ela pro final, alternadamente.
 Começa jogando a carta fora, depois passa a próxima para o final, depois descarta a próxima, 

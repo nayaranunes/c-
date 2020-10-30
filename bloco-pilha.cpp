@@ -41,36 +41,82 @@ Para esse caso, a entrada seria dada assim:
 E a saída:
 5
 */
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
 	
-	int N1, N2, N3, H1 = 0, H2 = 0, H3 =  = 0;
+	int N1, N2, N3, H1 = 0, H2 = 0, H3 = 0;
 	cin >> N1 >> N2 >> N3;
+
+	vector<int> n;
 	
 	stack<int> pilha1;
 	stack<int> pilha2;
 	stack<int> pilha3;
 
-	for (int j = 0; j < N1; j++) {
-						
-		vector<int> n1;
+	for (int i = 0; i < N1; i++) {
+
+		int a;
 		cin >> a;
-		H[i] += a;
-			n1.push_back(a);
-		}
-		for (j = 0; !n1.empty(); j++) {
-			stack<int> pilha;
-			pilha.push(n[n.size]);
-			n.pop_back();
-		}			 
-		
-		i++;	
+		H1 += a;
+		n.push_back(a);	
+	}
+
+	for (int j = 0; !n.empty(); j++) {
+		pilha1.push(n[n.size()-1]);
+		n.pop_back();
+	}
+
+	for (int i = 0; i < N2; i++) {
+						
+		int a;
+		cin >> a;
+		H2 += a;
+		n.push_back(a);
+	}
+
+	for (int j = 0; !n.empty(); j++) {
+		pilha2.push(n[n.size()-1]);
+		n.pop_back();
+	}
+
+	for (int i = 0; i < N3; i++) {
+						
+		int a;
+		cin >> a;
+		H3 += a;
+		n.push_back(a);
+	}
+
+	for (int j = 0; !n.empty(); j++) {
+		pilha3.push(n[n.size()-1]);
+		n.pop_back();	
 	}
 	
-	for (i = 0; i < foo.size(); i++)
-	    std::cout << ' ' << foo[i];
+	while(!(H1 == H2 && H1 == H3)) {
+
+		if (H1 > H2 && H1 > H3) {
+			H1 -= pilha1.top();
+			pilha1.pop();
+			continue;
+		} else {
+			if (H2 > H3) {		
+				H2 -= pilha2.top();
+				pilha2.pop();
+				continue;
+			} else {
+			
+				H3 -= pilha3.top();
+				pilha3.pop();
+			}
+		}
+	}
+
+	cout << "H pilha1 = " << H1 << endl;
+	cout << "H pilha2 = " << H2 << endl;
+	cout << "H pilha3 = " << H3 << endl;
 	
 	return 0;
 }
