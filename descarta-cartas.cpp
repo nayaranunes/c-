@@ -68,30 +68,26 @@ int main() {
 	}
 	
 	//percorre each N
-	for (int i = 0; !v.empty(); i++) {
+	for (int i = 0; i < v.size(); i++) {
+		
 		queue<int> fila;
 		int j = 1;
 		
-		while (fila.size() != v.front()) { //1 ate N	
-			cout << j << " ";			
+		while (j <= v[i]) { //1 ate N	
+				
 			fila.push(j);
 			j++;				
 		}
 
-		cout << endl;
-		
 		while (fila.size() != 1) {
-			cout << "Descartando => " << fila.front() << endl;
+			//cout << "Descartando => " << fila.front() << endl;
 			fila.pop();
-			cout << "Final da fila => " << fila.front() << endl;
+			//cout << "Final da fila => " << fila.front() << endl;
 			fila.push(fila.front());
 			fila.pop(); 
 		}
 		
 		cout << "Carta sobrevivente => " << fila.front() << '\n';
-		
-		v.erase(v.begin()); //decrementando N
-			
 	}
 
 	return 0;

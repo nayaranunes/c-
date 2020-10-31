@@ -95,17 +95,15 @@ int main() {
 		n.pop_back();	
 	}
 	
-	while(!(H1 == H2 && H1 == H3)) {
+	while (!(H1 == H2 && H1 == H3)) {
 
 		if (H1 > H2 && H1 > H3) {
 			H1 -= pilha1.top();
 			pilha1.pop();
-			continue;
 		} else {
 			if (H2 > H3) {		
 				H2 -= pilha2.top();
 				pilha2.pop();
-				continue;
 			} else {
 			
 				H3 -= pilha3.top();
