@@ -1,0 +1,53 @@
+a 2 
+b 1 
+c 3 
+d 4 
+e 6 
+f 5 
+g 7 
+h 8 
+i 9 
+j 10 
+k 12 
+l 11 
+m 13 
+n 14 
+o 15 
+p 16 
+q 17 
+r 18 
+s 22 
+t 21 
+u 20 
+v 19 
+x 23 
+w 24 
+y 26 
+z 25 
+26
+cdb
+aabc 
+ra 
+na 
+bruma 
+leve 
+das 
+paixões
+que 
+vêm 
+de 
+dentro
+tu 
+vens 
+chegando
+pra 
+brincar 
+no
+meu
+quintal
+no
+teu
+cavalo
+cabelo 
+ao 
+vento
