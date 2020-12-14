@@ -3,17 +3,27 @@ using namespace std;
 
 int main() {
 
-    int a;
-    cin >> a;
+    int h1, m1, h2, m2, duracao;
+    
+    scanf("%d %d %d %d", &h1, &m1, &h2, &m2);
 
-    if (a == 61) cout << "Brasilia\n";
-    if (a == 71) cout << "Salvador\n";
-    if (a == 11) cout << "Sao Paulo\n";
-    if (a == 21) cout << "Rio de Janeiro\n";
-    if (a == 32) cout << "Juiz de Fora\n";
-    if (a == 19) cout << "Campinas\n";
-    if (a == 27) cout << "Vitoria\n";
-    if (a == 31) cout << "Belo Horizonte\n";
-    if (a != 61 && a != 71 && a != 11 && a != 21 && a != 32 && a != 19 && a != 27 && a != 31) cout << "DDD nao cadastrado\n";
+    int min1 = (h1*60) + m1, min2 = (h2*60) + m2;
+    
+    duracao = abs(min2 - min1);
+    
+    if (h1 == h2 && m1 == m2) {
+        printf("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)\n");
+        return 0;
+    }
+    
+    if (min1 > min2) { 
+        if (duracao % 60 == 0) {
+            printf("O JOGO DUROU %d HORA(S) E 0 MINUTO(S)\n", 24 - (duracao/60));
+            return 0;
+        }
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", 23 - (duracao/60), 60 - (duracao%60));
+    } else
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", duracao/60, duracao%60);
+        
     return 0;
 }
