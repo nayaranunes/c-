@@ -7,16 +7,19 @@ int main() {
     cin >> a;
     cout << fixed << setprecision(2);
 
-    if (a > 2000.00) {
-        a -= 2000.00;
-    } else {
-        cout << "Isento\n";
+    if (a < 0) {
         return 0;
     }
 
+    if (a <= 2000.00) {
+        cout << "Isento\n";
+        return 0;
+    }
+    
+    a -= 2000.00;
     double imposto = 0;
 
-    if (a < 1000.00) {
+    if (a <= 1000.00) {
 
         imposto += a * 0.08;
 
@@ -24,7 +27,7 @@ int main() {
 
         imposto += 80;
 
-        if (a < 2500.00) {
+        if (a <= 2500.00) {
 
             imposto += (a - 1000.00) * 0.18;
 
@@ -36,7 +39,7 @@ int main() {
         }
     }  
 
-    cout <<  imposto << endl;
+    cout <<  "R$ " << imposto << endl;
     
     return 0;
 }
