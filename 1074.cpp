@@ -7,7 +7,7 @@ int main() {
 	cin >> n;
 	
 	if (n >= 100000) return 0;
-
+	cout << setprecision(1);
 	vector<int> v;
 	
 	for (int i = 0; i < n; i++) {
