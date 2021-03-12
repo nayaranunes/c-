@@ -1,10 +1,12 @@
-#include <iostream>
+#include <bits/stdc++.h>
  
 using namespace std;
  
 int main() {
-    cout << fixed << setprecision(2);
     int n = 0;
+
+    cout << fixed << setprecision(1);
+    
     cin >> n;
     for(int i = 0; i < n; ++i) {
         int a = 0, b = 0;
