@@ -16,10 +16,7 @@ int main() {
 		if (b == ultimo) {
 
 			cont ++;
-			cout << "b"<< b <<endl;
-			cout << "ultimo"<< ultimo <<endl;
-			cout << "cont"<< cont <<endl;
-			cout << "maior"<< maior <<endl;
+	
 		} else {
 			
 			cont = 1;
