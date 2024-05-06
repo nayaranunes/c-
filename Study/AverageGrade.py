@@ -9,7 +9,7 @@
 grade1 = float(input("Enter first grade: "))
 grade2 = float(input("Enter second grade: "))
 grade3 = float(input("Enter third grade: "))
-average = (grade1+grade2+grade3)/3
+average = (grade1+grade2+grade3) / 3
 print("Average grade:", round(average, 2))
 
 # SECOND What if we needed to read 100 grades? One by one?
