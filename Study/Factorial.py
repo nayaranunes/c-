@@ -5,13 +5,11 @@
 # positivos de 1 até o próprio número.)
 
 n = int(input("Enter one number: "))
-i = 1
-factorial = 0
+factorial = 1
 
-while factorial != n:
-    factorial = n * (n-i)
-    n += 1
-
-def factorial(int num):
-
-    return n * n-1;
+while n > 1:
+    factorial = factorial * n
+    n -= 1
+    
+print(factorial)
+#TODO recursive
