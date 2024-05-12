@@ -1,3 +1,4 @@
+#DESAFIO Palindromo
 
 palavra = input("Digite uma palavra para verificar se é um palíndromo: ")
 palavra = palavra.lower()
