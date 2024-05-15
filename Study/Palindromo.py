@@ -8,4 +8,4 @@ else:
     print(f"A palavra '{palavra}' não é um palíndromo.")
 
 #TODO IN JAVA
-nayara vamos estudar meu anjo
+# nayara vamos estudar meu anjo
