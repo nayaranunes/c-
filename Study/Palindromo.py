@@ -10,3 +10,4 @@ else:
 #TODO IN JAVA
 # nayara vamos estudar meu anjo 
 #isso n e um diario :(
+#hoje eh domingo amanha eu comeco 
