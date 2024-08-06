@@ -6,23 +6,28 @@
 
 import os
 
-def timeConversion(s):
-    time = s[:-2]
-    time = time[2:]
-    ampm = s[-2]
+
+def am(s):
+    if s[:2] != '12':
+        return s[:-2]
+    else:
+        return '00' + s[2:-2]
+
+
+def pm():
     hour = s[:2]
-    hora = int(hour)
-    if ampm == 'A':
-        if hora != 12:
-           return (s[:-2])
-        else:
-            hour = '00'
-            return (hour + time)
-    if ampm == 'P':
-        if hora != 12:
-            hora = hora + 12
-        hour = str(hora)
-        return (hour+time)
+    if hour != '12':
+        hour = int(hour) + 12
+        return str(hour) + s[2:-2]
+    else:
+        return s[:-2]
+
+def timeConversion(s):
+    # penultimo caracter [-2]
+    if s[-2] == 'A':
+        return am(s)
+    if s[-2] == 'P':
+        return pm()
 
 
 if __name__ == '__main__':
