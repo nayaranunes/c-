@@ -1,3 +1,4 @@
+#Big O = n
 def fizzBuzz(n):
     i = 1
     fizz = 3
