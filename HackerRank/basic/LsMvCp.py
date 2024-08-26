@@ -16,7 +16,7 @@ def systemReader(commands):
 
     for command in commands:
         if '!' in command:
-            find_command(command, commands)
+            command = find_command(command, commands)
         if command == 'cp':
             result[0] += 1
         if command == 'ls':
