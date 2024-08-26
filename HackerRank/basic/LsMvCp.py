@@ -10,13 +10,29 @@ def find_command(command, commands):
     return command
 
 
+def find_command_cache(command, commands, cache):
+    if command in cache:
+        # Return cached result if available
+        return cache[command]
+
+    original_command = command
+    while command not in ['cp', 'ls', 'mv']:
+        index = int(command[1:])
+        command = commands[index]
+
+    # Store the resolved command in the cache
+    cache[original_command] = command
+    return command
+
+
 def systemReader(commands):
 
     result = [0,0,0]
-
+    cache = {}
+    
     for command in commands:
         if '!' in command:
-            command = find_command(command, commands)
+            command = find_command_cache(command, commands, cache)
         if command == 'cp':
             result[0] += 1
         if command == 'ls':
