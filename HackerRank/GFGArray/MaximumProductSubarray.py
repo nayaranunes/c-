@@ -6,22 +6,8 @@
 
 def max_sub_array(nums):
 
-    sub_arr = []
-    current_product = 0
-    max_product = 0
 
-    for i in range(len(nums)):
-
-        current_product = nums[i] * nums[i+1]
-        next_product = current_product * nums[i+2]
-
-        if current_product > next_product:
-            max_product = current_product
-            sub_arr.append(nums[i])
-            sub_arr.append(nums[i+1])
-
-    return sub_arr
-
+    return None
 
 
 if __name__ == '__main__':
