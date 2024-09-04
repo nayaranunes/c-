@@ -6,7 +6,7 @@ def binary_search(nums, item):
 
     while top >= down:
 
-        middle = int((top + down) / 2)
+        middle = top + down // 2
         strike = nums[middle]
 
         if strike == item:
