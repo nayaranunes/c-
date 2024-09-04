@@ -29,7 +29,7 @@ def systemReader(commands):
 
     result = [0,0,0]
     cache = {}
-    
+
     for command in commands:
         if '!' in command:
             command = find_command_cache(command, commands, cache)
