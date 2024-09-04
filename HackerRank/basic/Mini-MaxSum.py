@@ -1,32 +1,23 @@
-# Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+# Given five positive integers, find the minimum and maximum values
+# that can be calculated by summing exactly four of the five integers.
 # Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 # Example [1,3,5,7,9]
-# The minimum sum is  and the maximum sum is . The function prints
-# 16 24
-
-import math
-import os
-import random
-import re
-import sys
+# The minimum sum is 16 and the maximum sum is 24
 
 # Complexity N -> run all elements of array
-def miniMaxSumFirstApproach(arr):
+def mini_max_sum_first_approach(arr):
     maximum = 0
     minimum = arr[0]
     soma = 0
 
     for i in arr:
-        soma = soma + i
-        if i > maximum:
-            maximum = i
-        if i < minimum:
-            minimum = i
+        soma += i
+        maximum = max(i, maximum)
+        minimum = min(i, minimum)
 
     print(soma - maximum, soma - minimum)
 
 
 if __name__ == '__main__':
-    arr = list(map(int, input().rstrip().split()))
 
-    miniMaxSumFirstApproach(arr)
+    print(mini_max_sum_first_approach([1, 3, 5, 7, 9]))
